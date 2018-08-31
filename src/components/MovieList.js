@@ -23,20 +23,23 @@ class MovieList extends Component {
 
     render() {
         console.log(this.state.movies);
-        if(this.props.auth.username !== "") {
-            return (
-                <section className="bg-light" id="portfolio">
-                    <div className="container">
-                        <h1>Ini Movie List</h1>
-                        <div className="row">
-                            {this.renderMovieList()}
+        if(this.props.auth.cookieCheck === true) {
+            if(this.props.auth.username !== "") {
+                return (
+                    <section className="bg-light" id="portfolio">
+                        <div className="container">
+                            <h1>Ini Movie List</h1>
+                            <div className="row">
+                                {this.renderMovieList()}
+                            </div>
                         </div>
-                    </div>
-                </section>
-            );
+                    </section>
+                );
+            }
+            
+            return <Redirect to="/login" />;
         }
-        
-        return <Redirect to="/login" />;
+        return <div>Authentication Checking</div>;
     }
 }
 
