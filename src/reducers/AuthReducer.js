@@ -14,4 +14,9 @@ export default (state = INITIAL_STATE, action) => {
             return state;
     }
 }
+
+// payload = { index: 1, propsName: "name", value: "Karu" };
+// booking : [{ name: "Test"}, { name: "Kool" }, { name: "Helo"}];
+// booking[payload.index][payload.propsName] = payload.value;
+
     

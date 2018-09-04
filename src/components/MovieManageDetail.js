@@ -21,7 +21,7 @@ class MovieManageDetail extends Component {
                 </tr>
             );
         }
-
+        
         return(
             <tr>
                 <td>{id}</td>
@@ -41,3 +41,7 @@ class MovieManageDetail extends Component {
 }
 
 export default MovieManageDetail;
+
+// for(var i in movieList) {
+//     var cbCheck = this.refs[`cb${i}`] 
+// }
